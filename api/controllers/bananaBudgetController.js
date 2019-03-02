@@ -1,6 +1,6 @@
 'use strict';
 
-exports.compute_cost = function(req, res) {
+exports.getCost = function(req, res) {
  res.json({cost: totalCost(req.query.startDate, req.query.numberOfDays)});
 };
 

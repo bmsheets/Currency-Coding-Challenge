@@ -3,6 +3,6 @@
 module.exports = function(app) {
   var bananaBudget = require('../controllers/bananaBudgetController');
 
-  app.route('/cost')
-    .get(bananaBudget.compute_cost);
+  app.route('/api/cost')
+    .get(bananaBudget.getCost);
 };
