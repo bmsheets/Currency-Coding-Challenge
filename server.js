@@ -7,4 +7,4 @@ routes(app);
 
 app.listen(port);
 
-console.log('todo list RESTful API server started on: ' + port);
+console.log('Bob\'s Banana Budget RESTful API server started on: ' + port);
