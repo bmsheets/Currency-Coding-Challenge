@@ -14,7 +14,7 @@ function totalCost(startDate, numberOfDays) {
     total += dailyCost(date);
     date.setDate(date.getDate() + 1);
   }
-  return total;
+  return formatCost(total);
 }
 
 // Return Bob's budget on a given day of the month in cents.
@@ -25,4 +25,9 @@ function dailyCost(date) {
   }
   // Bananas cost $0.05 * number of weeks that have passed in the month.
   return 5 * (1 + Math.floor((date.getDate() - 1) / 7));
+}
+
+function formatCost(cents) {
+  const dollars = cents / 100;
+  return dollars.toLocaleString("en-US", {style:"currency", currency:"USD"});
 }
